@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Styling Course Work</title>
+
+    <!-- Internal (Embedded) Styling -->
+    <style>
+        /* Internal styling for an inline element */
+        em {
+            font-family: "Courier New";
+            color: green;
+            font-size: 20px;
+        }
+
+        /* Internal styling for a block element */
+        section {
+            width: 300px;
+            height: 150px;
+            background-color: lightyellow;
+            margin-left: 40px;
+            margin-right: 40px;
+            font-size: 18px;
+        }
+    </style>
+
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<h1>Purpose of this course work</h1>
+<p>To learn how to style elements in an HTML file.</p>
+
+<p>
+There are 3 main stylings in HTML. You will see examples of each for inline and
+block elements below.
+</p>
+
+<hr>
+
+<h2>Inline Styling</h2>
+
+<h3>Inline element styling:</h3>
+<p>
+This is an example using a
+<span style="font-family: Arial; color: red; font-size: 22px;">
+span inline element
+</span>
+styled using inline CSS.
+</p>
+
+<h3>Block element styling:</h3>
+<div style="width: 250px; height: 120px; background-color: lightblue; margin-left: 30px; margin-right: 30px;">
+This div is a block element styled using inline CSS.
+</div>
+
+<hr>
+
+<h2>Internal (Embedded) Styling</h2>
+
+<h3>Inline element styling:</h3>
+<p>
+This sentence contains an <em>em inline element</em> styled using internal CSS.
+</p>
+
+<h3>Block element styling:</h3>
+<section>
+This section is a block element styled using internal CSS.
+</section>
+
+<hr>
+
+<h2>External Styling</h2>
+
+<h3>Inline element styling:</h3>
+<p>
+This sentence uses a <strong>strong inline element</strong> styled using external CSS.
+</p>
+
+<h3>Block element styling:</h3>
+<img src="example.jpg" alt="Sample Image">
+
+</body>
+</html>

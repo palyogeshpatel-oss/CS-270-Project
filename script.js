@@ -1,28 +1,23 @@
-// 1. Display Current Date in Footer
-document.getElementById('currentDate').innerText = new Date().toLocaleDateString();
-
-// 2. Theme Toggle Logic (Visual Coding)
-const themeBtn = document.getElementById('themeToggle');
+// 1. Theme Toggle (JavaScript Logic)
+const themeBtn = document.getElementById('themeBtn');
 themeBtn.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
+    themeBtn.textContent = document.body.classList.contains('dark-mode') ? "Light Mode" : "Dark Mode";
 });
 
-// 3. User Data Processing (Requirement 4)
-function processData() {
-    const input = document.getElementById('userInput');
-    const list = document.getElementById('dataList');
+// 2. Form Validation and Data Handling (User Data requirement)
+const userForm = document.getElementById('userForm');
+const feedback = document.getElementById('jsFeedback');
+
+userForm.addEventListener('submit', function(event) {
+    const name = document.getElementById('userName').value;
     
-    if (input.value.trim() !== "") {
-        // Create a new list item based on keyboard input
-        const newItem = document.createElement('li');
-        newItem.textContent = input.value;
-        
-        // Add to the list
-        list.appendChild(newItem);
-        
-        // Clear input
-        input.value = "";
+    // Simple JS interaction before PHP takes over
+    if (name.length < 2) {
+        event.preventDefault(); // Stop form if name is too short
+        feedback.innerHTML = "<p style='color:red;'>Error: Please enter a real name.</p>";
     } else {
-        alert("Please type a project idea first!");
+        // Log to console to show JS is working
+        console.log("Form data submitted for: " + name);
     }
-}
+});

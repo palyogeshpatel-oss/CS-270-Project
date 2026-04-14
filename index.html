@@ -1,85 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>CSS Styling Course Work</title>
-
-    <!-- Internal (Embedded) Styling -->
-    <style>
-        /* Internal styling for an inline element */
-        em {
-            font-family: "Courier New";
-            color: green;
-            font-size: 20px;
-        }
-
-        /* Internal styling for a block element */
-        section {
-            width: 300px;
-            height: 150px;
-            background-color: lightyellow;
-            margin-left: 40px;
-            margin-right: 40px;
-            font-size: 18px;
-        }
-    </style>
-
-    <!-- Link to External CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Portfolio | [Pal Patel]</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<h1>Purpose of this course work</h1>
-<p>To learn how to style elements in an HTML file.</p>
+    <div class="wrapper">
+        <header class="main-header">
+            <h1>Academic Portfolio: Computer Science 2026</h1>
+            <button id="themeBtn">Toggle Dark Mode</button>
+        </header>
 
-<p>
-There are 3 main stylings in HTML. You will see examples of each for inline and
-block elements below.
-</p>
+        <div class="info-grid">
+            <section class="card">
+                <h2>Personal Info</h2>
+                <p><strong>Name:</strong> [Pal Patel]</p>
+                <p><strong>Bio:</strong> Aspiring Developer focused on web technologies and software engineering.</p>
+            </section>
 
-<hr>
+            <section class="card profile-center">
+                <img src="profile.jpg" alt="Professional Portrait" class="avatar">
+            </section>
 
-<h2>Inline Styling</h2>
+            <section class="card">
+                <h2>School Info</h2>
+                <p><strong>University:</strong> [Western Kentucky University]</p>
+                <p><strong>Major:</strong> Computer Science</p>
+                <p><strong>Expected:</strong> Class of 2027</p>
+            </section>
+        </div>
 
-<h3>Inline element styling:</h3>
-<p>
-This is an example using a
-<span style="font-family: Arial; color: red; font-size: 22px;">
-span inline element
-</span>
-styled using inline CSS.
-</p>
+        <div class="layout-container">
+            <aside class="sidebar">
+                <h3>Navigation & Links</h3>
+                <nav>
+                    <ul>
+                        <li><a href="https://github.com" target="_blank">GitHub Profile</a></li>
+                        <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+                        <li><a href="#contact">Contact Me</a></li>
+                    </ul>
+                </nav>
+                <img src="tech-icon.png" alt="Tech Stack Icon" class="side-img">
+            </aside>
 
-<h3>Block element styling:</h3>
-<div style="width: 250px; height: 120px; background-color: lightblue; margin-left: 30px; margin-right: 30px;">
-This div is a block element styled using inline CSS.
-</div>
+            <main class="main-content">
+                <h2>Project Showcase</h2>
+                <div class="project-item">
+                    <img src="project-screenshot.png" alt="Project Screenshot">
+                    <p><em>Featured: Final Web Integration Project for CS270.</em></p>
+                </div>
 
-<hr>
+                <hr>
 
-<h2>Internal (Embedded) Styling</h2>
+                <section id="contact" class="form-section">
+                    <h3>Send a Message</h3>
+                    <p>Use the form below to test user data processing.</p>
+                    <form id="userForm" action="process.php" method="POST">
+                        <input type="text" name="username" id="userName" placeholder="Your Name" required>
+                        <input type="email" name="email" id="userEmail" placeholder="Your Email" required>
+                        <textarea name="message" id="userMsg" placeholder="Your Message..." required></textarea>
+                        <button type="submit">Submit to Server (PHP)</button>
+                    </form>
+                    <div id="jsFeedback"></div>
+                </section>
+            </main>
+        </div>
 
-<h3>Inline element styling:</h3>
-<p>
-This sentence contains an <em>em inline element</em> styled using internal CSS.
-</p>
+        <footer class="footer">
+            <p>&copy; 2026 [Pal Patel] | Final Project Submission</p>
+        </footer>
+    </div>
 
-<h3>Block element styling:</h3>
-<section>
-This section is a block element styled using internal CSS.
-</section>
-
-<hr>
-
-<h2>External Styling</h2>
-
-<h3>Inline element styling:</h3>
-<p>
-This sentence uses a <strong>strong inline element</strong> styled using external CSS.
-</p>
-
-<h3>Block element styling:</h3>
-<img src="example.jpg" alt="Sample Image">
-
+    <script src="script.js"></script>
 </body>
 </html>
